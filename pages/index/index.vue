@@ -8,7 +8,7 @@
 			<view style="width: 30%;color: #1296DB;font-weight: bold;color: #FFF;display: flex;
 		justify-content: right;
 		align-items: center;">
-				User：
+				account：
 			</view>
 			<u-input placeholder="请填写账户" style="width: 50%;background-color: #FFF;"></u-input>
 		</view>

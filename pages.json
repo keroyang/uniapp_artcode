@@ -5,7 +5,8 @@
 	"pages": [{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "artcode"
+				"navigationBarTitleText": "artcode",
+				"navigationStyle": "custom"
 			}
 		}, {
 			"path": "pages/home/home",
@@ -15,7 +16,8 @@
 		}, {
 			"path": "pages/enroll/enroll",
 			"style": {
-				"navigationBarTitleText": "注册"
+				"navigationBarTitleText": "注册",
+				"navigationStyle": "custom"
 			}
 		},
 		{
@@ -36,10 +38,10 @@
 		}
 	],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
+		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"navigationBarBackgroundColor": "#FFF",
+		"backgroundColor": "#FFF"
 	},
 	"uniIdRouter": {}
 }
