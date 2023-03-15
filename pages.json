@@ -1,15 +1,43 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "artcode"
+			}
+		}, {
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}, {
+			"path": "pages/enroll/enroll",
+			"style": {
+				"navigationBarTitleText": "注册"
+			}
+		},
+		{
+			"path": "pages/exhibition/exhibition",
+			"style": {
+				"navigationBarTitleText": "展会介绍"
+			}
+		}, {
+			"path": "pages/questions/index",
+			"style": {
+				"navigationBarTitleText": "问题答疑"
+			}
+		}, {
+			"path": "pages/listofissues/index",
+			"style": {
+				"navigationBarTitleText": "List Of Issues"
 			}
 		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
+		"navigationBarTitleText": "",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
