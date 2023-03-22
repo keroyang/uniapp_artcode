@@ -24,7 +24,7 @@
 		{
 			"path": "pages/company/company",
 			"style": {
-				"navigationBarTitleText": "展会介绍",
+				"navigationBarTitleText": "Instrument Museum",
 				"navigationStyle": "custom",
 				"app-plus": {
 					"titleNView": {

@@ -6,7 +6,7 @@
 		<view class="tittle-box">
 			<view class="pic-box">
 				<view class="pic">
-					<image src="../../static/logo.png" style="width: 100rpx;height: 100rpx;border-radius: 50%;"></image>
+					<image src="../../static/bglogo.png" mode="aspectFit" style="width: 150rpx;height: 150rpx;"></image>
 				</view>
 				<view class="pic-text">
 					UserID : {{userInfo.displayNo}}
@@ -22,37 +22,49 @@
 		<view class="account-center">
 			<view class="scan">
 				<u-button type="primary"
-					style="background-color:#1296DB;font-weight: bold;font-size: 58rpx;border: none;height: 300rpx;">
+					style="background-color:#1296DB;font-weight: bold;font-size: 35rpx;border: none;height: 150rpx;">
 					<view style="width: 50%;">
-						扫描艺术码
+						Scan the ArtCode
 					</view>
 					<view class="icon-pic">
-						<u-icon name="scan" color="#FFF" size="58"></u-icon>
-					</view>
-				</u-button>
-			</view>
-			<view class="scan" @click="goUrl('/pages/questions/index')">
-				<u-button type="primary"
-					style="background-color:#1296DB;font-weight: bold;font-size: 58rpx;border: none;height: 300rpx;">
-					<view style="width: 50%;">
-						问题答疑
-					</view>
-					<view class="icon-pic">
-						<u-icon name="grid" color="#FFF" size="58"></u-icon>
+						<u-icon name="scan" color="#FFF" size="44"></u-icon>
 					</view>
 				</u-button>
 			</view>
 			<view class="scan" @click="goUrl('/pages/company/company')">
 				<u-button type="primary"
-					style="background-color:#1296DB;font-weight: bold;font-size: 58rpx;height: 300rpx;;border: none;">
+					style="background-color:#1296DB;font-weight: bold;font-size: 35rpx;height: 150rpx;;border: none;">
 					<view style="width: 50%;">
-						展会介绍
+						Exhibition Introduction
 					</view>
 					<view class="icon-pic">
-						<u-icon name="photo" color="#FFF" size="58"></u-icon>
+						<u-icon name="photo" color="#FFF" size="44"></u-icon>
 					</view>
 				</u-button>
 			</view>
+			<view class="scan" @click="goUrl('/pages/questions/index')">
+				<u-button type="primary"
+					style="background-color:#1296DB;font-weight: bold;font-size: 35rpx;border: none;height: 150rpx;">
+					<view style="width: 50%;">
+						Quiz
+					</view>
+					<view class="icon-pic">
+						<u-icon name="grid" color="#FFF" size="44"></u-icon>
+					</view>
+				</u-button>
+			</view>
+			<view class="scan" @click="goLogOut()">
+				<u-button type="primary"
+					style="background-color:#1296DB;font-weight: bold;font-size: 35rpx;border: none;height: 150rpx;">
+					<view style="width: 50%;">
+						Log out
+					</view>
+					<!-- <view class="icon-pic">
+						<u-icon name="grid" color="#FFF" size="58"></u-icon>
+					</view> -->
+				</u-button>
+			</view>
+			
 		</view>
 
 	</view>
@@ -103,6 +115,14 @@
 					url: url
 				})
 			},
+			goLogOut(){
+				uni.removeStorage({
+					key:'token'
+				})
+				uni.reLaunch({
+					url:'/pages/index/index'
+				})
+			}
 		}
 	}
 </script>

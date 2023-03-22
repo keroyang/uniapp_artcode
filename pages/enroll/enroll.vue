@@ -4,7 +4,7 @@
 			<image src="../../static/logo.png" style="width: 200rpx;height: 200rpx;border-radius: 50%;"></image>
 		</view>
 		<view class="account">
-			<view style="width: 30%;color: #1296DB;font-weight: bold;color: #FFF;display: flex;
+			<view style="width: 30%;color: #1296DB;font-weight: bold;display: flex;
 		justify-content: right;
 		align-items: center;">
 				account：
@@ -13,7 +13,7 @@
 				style="width: 50%;background-color: #FFF;"></u-input>
 		</view>
 		<view class="account cssico " style="margin-top: 50rpx;">
-			<view style="width:30%;color: #1296DB;font-weight: bold;color: #FFF;display: flex;
+			<view style="width:30%;color: #1296DB;font-weight: bold;display: flex;
 		justify-content: right;
 		align-items: center;">
 				password：
@@ -22,7 +22,7 @@
 				style="width: 50%;background-color: #FFF; "></u-input>
 		</view>
 		<view class="account cssico " style="margin-top: 50rpx;">
-			<view style="width:30%;color: #1296DB;font-weight: bold;color: #FFF;display: flex;
+			<view style="width:30%;color: #1296DB;font-weight: bold;display: flex;
 		justify-content: right;
 		align-items: center;">
 				comfirm：
@@ -146,7 +146,7 @@
 	}
 
 	.content {
-		background-image: url('@/static/bj.png');
+		/* background-image: url('@/static/bj.png'); */
 		width: 100%;
 		position: fixed;
 		height: 100%;

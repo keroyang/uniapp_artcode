@@ -4,7 +4,7 @@
 			<image :src="baseInfo.showUrl" style="width: 100%;height: 400rpx;"></image>
 			<view class="box">
 				<view class="box-accouent" style="margin-top: 30rpx;">
-					<view class="exhibitioni-title"
+					<!-- <view class="exhibitioni-title"
 						style="width: 100%;color: #1296DB;;font-weight: bold;font-size: 48rpx;display: flex;" v-text="baseInfo.displayName">
 					</view>
 					<view class="tittle-name account-css " v-text="baseInfo.displayTip">
@@ -30,8 +30,8 @@
 					</view>
 					<view class="exhibition-details account-css" style="color: #1296DB;font-size: 42rpx;">
 						展会详情
-					</view>
-					<view class="text-accaount" v-html="baseInfo.displayContent">
+					</view> -->
+					<view class="text-accaount" style="font-size: 34rpx;line-height: 1.5;" v-html="baseInfo.displayContent">
 						
 					</view>
 				</view>

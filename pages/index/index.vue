@@ -1,10 +1,10 @@
 <template>
 	<view class="content">
 		<view class="text-area">
-			<image src="../../static/logo.png" style="width: 200rpx;height: 200rpx;border-radius: 50%;"></image>
+			<image src="../../static/bglogo.png" mode="aspectFit" style="width: 300rpx;height: 300rpx;"></image>
 		</view>
 		<view class="account">
-			<view style="width: 30%;color: #1296DB;font-weight: bold;color: #FFF;display: flex;
+			<view style="width: 30%;color: #1296DB;font-weight: bold;display: flex;
 		justify-content: right;
 		align-items: center;">
 				account：
@@ -15,7 +15,7 @@
 		</view>
 		<view class="account cssico " style="margin-top: 50rpx;">
 			<view
-				style="width:30%;color: #1296DB;font-weight: bold;color: #FFF;display: flex;justify-content: right;align-items: center;">
+				style="width:30%;color: #1296DB;font-weight: bold;display: flex;justify-content: right;align-items: center;">
 				password：
 			</view>
 			<u-input placeholder="please input password" v-model="info.displayPassword" password="password"
@@ -23,7 +23,7 @@
 		</view>
 		<view>
 			<view style="width: 80%;margin:50rpx auto">
-				<u-button type="primary" @click="goLogin()">Login</u-button>
+				<u-button type="primary" @click="goLogin()">sign in</u-button>
 			</view>
 			<view style="width: 80%;margin:30rpx auto" @click="goUrl('/pages/enroll/enroll')">
 				<u-button type="primary">Register</u-button>
@@ -120,7 +120,7 @@
 
 <style>
 	.account {
-		margin: auto;
+		margin: 0 auto;
 		width: 80%;
 		display: flex;
 		justify-content: right;
@@ -132,11 +132,11 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: 300rpx 0rpx;
+		padding: 200rpx 0rpx;
 	}
 
 	.content {
-		background-image: url('@/static/bj.png');
+		/* background-image: url('@/static/bj.png'); */
 		width: 100%;
 		position: fixed;
 		height: 100%;
