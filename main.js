@@ -9,7 +9,7 @@ Vue.prototype.$moment = moment;
 Vue.config.productionTip = false
 App.mpType = 'app'
 
-Vue.prototype.$url = "http://127.0.0.1:8080";
+Vue.prototype.$url = "http://127.0.0.1:8090";
 
 Vue.use(uView);
 
