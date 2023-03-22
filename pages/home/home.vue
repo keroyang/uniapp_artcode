@@ -11,12 +11,12 @@
 				<view class="pic-text">
 					UserID : {{userInfo.displayNo}}
 				</view>
-				<view style="width: 35%;margin: auto;">
+				<!-- <view style="width: 35%;margin: auto;">
 					<view style="display: flex;justify-content: right;align-items: center;"
 						@click="goUrl('/pages/index/index')">
 						<u-icon name='arrow-right' size="16" color="#000"></u-icon>
 					</view>
-				</view>
+				</view> -->
 			</view>
 		</view>
 		<view class="account-center">

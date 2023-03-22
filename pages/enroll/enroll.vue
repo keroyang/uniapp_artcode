@@ -30,10 +30,20 @@
 			<u-input placeholder="please again input password" v-model="info.comfirmValue" password="password"
 				style="width: 50%;background-color: #FFF; "></u-input>
 		</view>
+		<view style="display: flex;flex-direction: row;align-items: center;width: 45vw;margin:30rpx auto 0 auto">
+			<u-checkbox-group size="24" v-model="checkboxValue1" placement="column" @change="checkboxChange">
+				<u-checkbox v-for="(item, index) in checkboxList1" :key="index" :name="item.name">
+				</u-checkbox>
+			</u-checkbox-group>
+			<view @click="goCondition">Condition</view>
+		</view>
 		<view
-			style="align-items: center;   display: flex;flex-direction: row-reverse;color: #FFF;width: 88vw;margin-top: 30rpx;font-size: 34rpx;">
+			style="  align-items: center;   display: flex;flex-direction: row-reverse;color: #FFF;width: 88vw;margin-top: 00rpx;font-size: 34rpx;">
+
+
 			<view style="background-color: #FFF;padding: 10rpx 15rpx;color: #1296DB;border-radius: 15rpx;"
 				@click="goUrl('/pages/index/index')">go login</view>
+
 		</view>
 		<view style="width: 80%;margin:30rpx auto">
 			<u-button type="primary" @click="goRegister">register</u-button>
@@ -53,7 +63,13 @@
 					displayAccount: "",
 					displayPassword: "",
 					comfirmValue: ""
-				}
+				},
+				checkboxValue1: ['condition'],
+				// 基本案列数据
+				checkboxList1: [{
+					name: 'condition',
+					disabled: false
+				}],
 			};
 		},
 
@@ -62,6 +78,17 @@
 		},
 		methods: {
 			...mapActions(['userRegister']),
+			checkboxChange(n) {
+				console.log('change', n);
+			},
+			goCondition() {
+				uni.showModal({
+					title: 'info',
+					content: 'This APP will record the information you fill in.',
+					showCancel:false,
+					confirmText:'sure'
+				})
+			},
 			goRegister() {
 				if (this.info.displayAccount == "" || this.info.displayPassword == "") {
 					uni.showToast({

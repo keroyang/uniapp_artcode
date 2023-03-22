@@ -1,5 +1,10 @@
 <template>
 	<view class="question-box">
+		
+		<view class="question">
+			What’s your favourite Music Instrument and which piece do you like most?
+		</view>
+		
 		<view class="question">
 			Please enter a question:
 			<view class="input" style="margin-top: 50rpx;color: #1296DB;">

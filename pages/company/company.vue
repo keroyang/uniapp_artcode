@@ -61,10 +61,15 @@
 		methods: {
 			...mapActions(['companyList']),
 			getCompany(){
+				uni.showLoading({
+					title:'loading....'
+				})
+				
 				this.companyList({
 					pageNum: 1,
 					pageSize: 1,
 				}).then(res=>{
+					uni.hideLoading()
 					if(res&&res.rows){
 						if(res.rows.length>0){
 							this.baseInfo=res.rows[0];
@@ -72,6 +77,8 @@
 						}
 						console.log(this.baseInfo)
 					}
+				}).catch(err=>{
+					uni.hideLoading()
 				})
 			},
 			goUrl(url) {
