@@ -39,7 +39,8 @@
 		}, {
 			"path": "pages/questions/index",
 			"style": {
-				"navigationBarTitleText": "问题答疑"
+				"navigationBarTitleText": "quiz",
+				"navigationBarTextStyle": "black"
 			}
 		}, {
 			"path": "pages/listofissues/index",
