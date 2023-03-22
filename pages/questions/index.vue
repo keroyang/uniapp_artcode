@@ -73,7 +73,7 @@
 					let data={
 						displayNo:this.displayNo,
 						userId:this.userId,
-						displayAccount:this.value
+						displayContent:this.value
 					}
 					console.log(data)
 					uni.showLoading({

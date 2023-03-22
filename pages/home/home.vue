@@ -103,7 +103,7 @@
 					console.log(res)
 					this.banners = []
 					if (res) {
-						let tmpList = res;
+						let tmpList = res.rows;
 						for (let item of tmpList) {
 							this.banners.push(this.$url + item.displayPicture)
 						}

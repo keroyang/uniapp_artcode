@@ -45,7 +45,8 @@
 		}, {
 			"path": "pages/listofissues/index",
 			"style": {
-				"navigationBarTitleText": "List Of Issues"
+				"navigationBarTitleText": "List Of Issues",
+				"navigationBarTextStyle": "black"
 			}
 		}
 	],
