@@ -1,8 +1,7 @@
 <template>
 	<view class="content">
 		<view class="text-area">
-			<image src="../../static/logo.png"
-				style="width: 200rpx;height: 200rpx;border-radius: 50%;border: #FFF 2px solid;"></image>
+			<image src="../../static/logo.png" style="width: 200rpx;height: 200rpx;border-radius: 50%;"></image>
 		</view>
 		<view class="account">
 			<view style="width: 30%;color: #1296DB;font-weight: bold;color: #FFF;display: flex;
@@ -10,24 +9,27 @@
 		align-items: center;">
 				account：
 			</view>
-			<u-input placeholder="请填写账户" style="width: 50%;background-color: #FFF;"></u-input>
+			<u-input placeholder="please input account" v-model="info.account" style="width: 50%;background-color: #FFF;">
+			</u-input>
 		</view>
 		<view class="account cssico " style="margin-top: 50rpx;">
-			<view style="width:30%;color: #1296DB;font-weight: bold;color: #FFF;display: flex;
-		justify-content: right;
-		align-items: center;">
+			<view style="width:30%;color: #1296DB;font-weight: bold;color: #FFF;display: flex;justify-content: right;align-items: center;">
 				password：
 			</view>
-			<u-input placeholder="请填写密码" password="password" style="width: 50%;background-color: #FFF; "></u-input>
+			<u-input placeholder="please input password" v-model="info.password" password="password"
+				style="width: 50%;background-color: #FFF; "></u-input>
 		</view>
 		<view>
-			<view style="width: 80%;margin:50rpx auto" @click="goUrl('/pages/home/home')">
-				<u-button type="primary">LOGIN</u-button>
+			<view style="width: 80%;margin:50rpx auto" >
+				<u-button type="primary" @click="goLogin()">Login</u-button>
 			</view>
 			<view style="width: 80%;margin:30rpx auto" @click="goUrl('/pages/enroll/enroll')">
-				<u-button type="primary">ENROLL</u-button>
+				<u-button type="primary">Register</u-button>
 			</view>
 		</view>
+		
+		
+		<!-- @click="goUrl('/pages/home/home')" -->
 	</view>
 </template>
 
@@ -35,13 +37,28 @@
 	export default {
 		data() {
 			return {
-
+				info: {
+					account: "",
+					password: ""
+				}
 			}
 		},
 		onLoad() {
 
 		},
 		methods: {
+
+			goLogin() {
+				if(this.info.account==""||this.info.password==""){
+					uni.showToast({
+						icon:'none',
+						title:'please input account or password'
+					})
+					
+				}else{
+					
+				}
+			},
 			goUrl(url) {
 				uni.navigateTo({
 					url: url

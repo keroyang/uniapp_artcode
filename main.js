@@ -2,9 +2,15 @@ import App from './App'
 
 // #ifndef VUE3
 import Vue from 'vue'
+import uView from "uview-ui";
+import moment from 'moment';
+
+Vue.prototype.$moment = moment;
 Vue.config.productionTip = false
 App.mpType = 'app'
-import uView from "uview-ui";
+
+Vue.prototype.$url = "http://127.0.0.1:8080";
+
 Vue.use(uView);
 
 try {
