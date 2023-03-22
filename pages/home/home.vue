@@ -1,7 +1,7 @@
 <template>
 	<view class="account-box">
 		<view class="account-box-pic">
-			<image src="../../static/background.png" style="width: 100%;"></image>
+			<u-swiper :list="banners" height="200"></u-swiper>
 		</view>
 		<view class="tittle-box">
 			<view class="pic-box">
@@ -42,7 +42,7 @@
 					</view>
 				</u-button>
 			</view>
-			<view class="scan" @click="goUrl('/pages/exhibition/exhibition')">
+			<view class="scan" @click="goUrl('/pages/company/company')">
 				<u-button type="primary"
 					style="background-color:#1296DB;font-weight: bold;font-size: 58rpx;height: 300rpx;;border: none;">
 					<view style="width: 50%;">
@@ -59,27 +59,45 @@
 </template>
 
 <script>
+	import {
+		mapActions
+	} from 'vuex'
 	export default {
 		data() {
 			return {
-				userInfo:{
-					
-				}
+				userInfo: {
+
+				},
+				banners: []
 			}
 		},
 		onLoad() {
-			let _this=this;
+			let _this = this;
 			uni.getStorage({
-				key:'token',
+				key: 'token',
 				success(res) {
 					console.log(res)
-					if(res.data){
-						_this.userInfo=res.data
+					if (res.data) {
+						_this.userInfo = res.data
 					}
 				}
 			})
+			this.getBanner()
 		},
 		methods: {
+			...mapActions(['bannerList']),
+			getBanner() {
+				this.bannerList({}).then(res => {
+					console.log(res)
+					this.banners = []
+					if (res) {
+						let tmpList = res;
+						for (let item of tmpList) {
+							this.banners.push(this.$url + item.displayPicture)
+						}
+					}
+				})
+			},
 			goUrl(url) {
 				uni.navigateTo({
 					url: url

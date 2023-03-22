@@ -22,9 +22,19 @@
 			}
 		},
 		{
-			"path": "pages/exhibition/exhibition",
+			"path": "pages/company/company",
 			"style": {
-				"navigationBarTitleText": "展会介绍"
+				"navigationBarTitleText": "展会介绍",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent",
+						"titleColor": "#fff",
+						"backgroundColor": "#1296DB",
+						"buttons": []
+					
+					}
+				}
 			}
 		}, {
 			"path": "pages/questions/index",
