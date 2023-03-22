@@ -9,11 +9,11 @@ const request = (config) => {
 	let promise = new Promise(function(resolve, reject) {
 		uni.request(config).then(responses => {
 			// 异常
-			if (responses[0]) {
-				reject({message : "网络超时"});
+			if (responses.statusCode!=200) {
+				reject({message : responses.errMsg});
 			} else {
-				let response = responses[1].data; 
-				resolve(response);
+				// let response = responses.data; 
+				resolve(responses.data);
 			}
 		}).catch(error => {
 			reject(error);
