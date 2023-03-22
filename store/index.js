@@ -13,7 +13,7 @@ const modules = modulesFiles.keys().reduce((modules, modulePath) => {
   return modules
 }, {})
 
-console.log(modules)
+
 
 Vue.use(Vuex);
 

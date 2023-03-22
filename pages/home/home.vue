@@ -9,7 +9,7 @@
 					<image src="../../static/logo.png" style="width: 100rpx;height: 100rpx;border-radius: 50%;"></image>
 				</view>
 				<view class="pic-text">
-					UserID : 123123123
+					UserID : {{userInfo.displayNo}}
 				</view>
 				<view style="width: 35%;margin: auto;">
 					<view style="display: flex;justify-content: right;align-items: center;"
@@ -62,11 +62,22 @@
 	export default {
 		data() {
 			return {
-
+				userInfo:{
+					
+				}
 			}
 		},
 		onLoad() {
-
+			let _this=this;
+			uni.getStorage({
+				key:'token',
+				success(res) {
+					console.log(res)
+					if(res.data){
+						_this.userInfo=res.data
+					}
+				}
+			})
 		},
 		methods: {
 			goUrl(url) {

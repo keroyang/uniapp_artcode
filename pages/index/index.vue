@@ -84,8 +84,28 @@
 								title: 'account or password error '
 							})
 						}else{
-							
+							let userInfo=res[0];
+							uni.setStorage({
+								key:'token',
+								data:userInfo,
+								success() {
+									uni.navigateTo({
+										url:'/pages/home/home'
+									})
+								},
+								fail() {
+									uni.showToast({
+										icon: 'none',
+										title: 'login fail '
+									})
+								}
+							})
 						}
+					}).catch(err=>{
+						uni.showToast({
+							icon: 'none',
+							title: 'login fail '
+						})
 					})
 				}
 			},
